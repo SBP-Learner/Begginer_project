@@ -4,10 +4,10 @@
 #define true = 1;
 #define false = 0;
 enum suit {
-    club = 0,
+    club = 1,
     diamonds = 10,
     hearts = 20,
-    spades = 3
+    spades = 88
 } card;
 
 int main() {
@@ -106,7 +106,7 @@ int main() {
 	printf("Size of enum variable = %d bytes", sizeof(card));
     printf("Enum variable = %d", (card); */	
 
-    //
+    // 
     return 0;
 }
 
