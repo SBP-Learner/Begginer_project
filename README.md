@@ -1,6 +1,8 @@
 # demo
-my first repo.
+This is my first repository.
 <br>
 By - Learner
 <br>
-my first push.
+I am a collage student doing practice for skills.
+<br>
+Otherwise i ain't surviving this field, lol!
