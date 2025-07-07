@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+#define true = 1;
+#define false = 0;
 enum suit {
     club = 0,
     diamonds = 10,
@@ -103,6 +105,8 @@ int main() {
     /* card = club;
 	printf("Size of enum variable = %d bytes", sizeof(card));
     printf("Enum variable = %d", (card); */	
+
+    //
     return 0;
 }
 
