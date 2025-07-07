@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
+enum suit {
+    club = 0,
+    diamonds = 10,
+    hearts = 20,
+    spades = 3
+} card;
+
 int main() {
     // Code for vote eligibility check
     /*int a;
@@ -41,7 +48,7 @@ int main() {
     // Simple calculator
 
 
-    float a,b,operation;
+    /* float a,b,operation;
     char choice;
     char op;
     printf("------Simple Calculator-------\n");
@@ -84,6 +91,18 @@ int main() {
         printf("Do you want to continue(Y/N) : ");
         scanf(" %c",&op);
     } while (op == 'Y' || op == 'y');
-    printf("Thank you!\n");
+    printf("Thank you!\n"); */
+
+
+    
+
+
+ 
+    // Enum testing
+
+    /* card = club;
+	printf("Size of enum variable = %d bytes", sizeof(card));
+    printf("Enum variable = %d", (card); */	
     return 0;
 }
+
