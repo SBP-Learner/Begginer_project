@@ -1,14 +1,21 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
+#include <time.h>
+#include <stdlib.h>
 
-#define true = 1;
-#define false = 0;
-enum suit {
+#define True = 1;
+#define False = 0;
+
+// enum function
+/* enum Cards {
     club = 1,
     diamonds = 10,
     hearts = 20,
     spades = 88
-} card;
+} card; */
+  
+
 
 int main() {
     // Code for vote eligibility check
@@ -106,7 +113,26 @@ int main() {
 	printf("Size of enum variable = %d bytes", sizeof(card));
     printf("Enum variable = %d", (card); */	
 
-    // 
+    // Number guessing game 
+    printf("____Welcome to____\n");
+    printf("____Number guessing game____\n");
+    printf("\n");
+    printf("Guess a number from (0-9)\n");
+   int a;
+    int min = 0, max = 9;
+  int rd_num;
+  srand(time(NULL));
+  do {
+    
+    
+    rd_num = rand() % (max - min + 1) + min;
+    printf("Guess a number : \n");
+    scanf("%d", &a);
+    printf("You guessed %d.\nThe number was %d\n\n",a, rd_num);
+  } while (rd_num != a);
+  printf("Congratulations! You guesses the right number.");
+    return 0;
+
     return 0;
 }
 
