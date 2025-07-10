@@ -58,10 +58,10 @@ int main() {
     
     // Simple calculator
 
-
-    /* float a,b,operation;
+/* 
+    float a,b,operation;
     char choice;
-    char op;
+    char options;
     printf("------Simple Calculator-------\n");
     do {
         printf("Enter first number : ");
@@ -100,8 +100,8 @@ int main() {
             printf("Invalid operator\n");
         }
         printf("Do you want to continue(Y/N) : ");
-        scanf(" %c",&op);
-    } while (op == 'Y' || op == 'y');
+        scanf(" %c",&options);
+    } while (options == 'Y' || options == 'y');
     printf("Thank you!\n"); */
 
 
@@ -115,26 +115,91 @@ int main() {
 	printf("Size of enum variable = %d bytes", sizeof(card));
     printf("Enum variable = %d", (card); */	
 
-    // Number guessing game 
-    printf("____Welcome to____\n");
+    // Number guessing game (Continous loop)
+    /* printf("____Welcome to____\n");
     printf("____Number guessing game____\n");
     printf("\n");
-    printf("Guess a number from (0-9)\n");
+    
    int a;
     int min = 0, max = 9;
-  int rd_num;
+  int random;
   srand(time(NULL));
-  do {
+  
+   do {
     
     
-    rd_num = rand() % (max - min + 1) + min;
-    printf("Guess a number : \n");
-    scanf("%d", &a);
-    printf("You guessed %d.\nThe number was %d\n\n",a, rd_num);
-  } while (rd_num != a);
-  printf("Congratulations! You guesses the right number.");
-    return 0;
+    
+    printf("Guess a number from (0-9)\n");
+    if (scanf("%d", &a) != 1) {
+        printf("Invalid input.\nPlease enter a number between 0 to 9.\n\n");
 
+        while (getchar() != '\n');
+        continue;
+
+    }
+    if (a >= 0 && a < 10) {
+        random = rand() % (max - min + 1) + min;
+    if (a == random) {
+        printf("\nHurray!\n");
+    } else {
+        printf("\nOops!!\n");
+    }
+    printf("You guessed %d.\nThe number was %d\n",a, random);
+} else {
+    printf("Invalid number.\nTry again.\n\n");
+}
+  } while (random != a);
+
+  printf("Congratulations! You guesses the right number.\n\n"); */
+   
+  // Number guessing game (Optional loop)
+   printf("____Welcome to____\n");
+    printf("____Number guessing game____\n");
+    printf("\n");
+    
+   int a;
+    int min = 0, max = 9;
+  int random, correct = 0, played = 0;
+  char again;
+  srand(time(NULL));
+    do {
+    
+    printf("Guess a number from (0-9)\n");
+
+    if (scanf("%d", &a) != 1) {
+        printf("Invalid input.\nPlease enter a number between 0 to 9.\n\n");
+
+        while (getchar() != '\n');
+    }
+    else if (a >= 0 && a < 10) {
+        random = rand() % (max - min + 1) + min;
+    if (a == random) {
+        printf("\nHurray! You guessed right\n");
+        correct ++;
+    } else {
+        printf("\nOops! Wrong guess.\n");
+    }
+    printf("You guessed %d.\nThe number was %d\n",a, random);
+    played ++;
+} else {
+    printf("Invalid number.\n\n");
+    while (getchar() != '\n');
+    
+}
+    printf("Do you want to continue? (Y/N) : ");
+    scanf(" %c", &again);
+    while (getchar() != '\n');
+
+  } while (again == 'Y' || again == 'y');
+
+  printf("\nThank you for playing.\n");
+  printf("You played %d games.\n", played);
+  printf("You guessed %d correct.\n", correct);
+  printf("Your score is %d/%d\n",correct,played);
+
+  if (played > 0) {
+  printf("Your win rate is %.2f%%\n",(correct * 100) / played);
+}
     return 0;
 }
 
