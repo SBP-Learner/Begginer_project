@@ -159,12 +159,13 @@ int main() {
     
    int a;
     int min = 0, max = 9;
-  int random, correct = 0, played = 0;
+  int random,played = 0;
+  int correct = 0;
   char again;
   srand(time(NULL));
     do {
     
-    printf("Guess a number from (0-9)\n");
+    printf("\nGuess a number from (0-9)\n");
 
     if (scanf("%d", &a) != 1) {
         printf("Invalid input.\nPlease enter a number between 0 to 9.\n\n");
@@ -198,7 +199,7 @@ int main() {
   printf("Your score is %d/%d\n",correct,played);
 
   if (played > 0) {
-  printf("Your win rate is %.2f%%\n",(correct * 100) / played);
+  printf("Your win rate is %.2f%%\n",((float)correct * 100) / played);
 }
     return 0;
 }
