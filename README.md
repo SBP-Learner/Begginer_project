@@ -5,4 +5,4 @@ By - Learner
 <br>
 I am a collage student doing practice for skills.
 <br>
-Otherwise i ain't surviving this field, lol!
+This is a demo repository for c language practice, Python language practice and Web pages
