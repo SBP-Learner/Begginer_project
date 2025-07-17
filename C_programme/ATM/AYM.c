@@ -1,7 +1,10 @@
 # include <stdio.h>
  
  int main() {
-    // Currently in progress
+
+    // Currently in progress, Not completed.
+
+
  // ATM Machines
       printf("Welcome to ATM Machine\n");
      int PIN = 9999,EPin,choose,
