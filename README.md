@@ -1,6 +1,6 @@
 #  Demo Projects by SBP‑Learner
 
-This repository showcases my beginner-friendly programming projects in **Python** and **C**, built to understand core programming concepts step by step.
+This repository showcases my beginner-friendly programming projects in 'Python' and 'C', built to understand core programming concepts step by step.
 
 ---
 
