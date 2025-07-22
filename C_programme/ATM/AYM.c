@@ -8,7 +8,7 @@
  // ATM Machines
       printf("Welcome to ATM Machine\n");
      int PIN,EPin,choose;
-     float balance = 10000,withdraw,deposit;
+     float balance = 100000,withdraw,deposit;
      char YES;
         printf("Create a 4 digit PIN : ");
         while (scanf("%d", &PIN) != 1 || PIN < 1000 || PIN > 10000) {
